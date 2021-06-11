@@ -36,6 +36,12 @@ Para practicar, intenta no usar métodos de array o filtrar los datos usando buc
 
 ## BONUS
 
-1. En el caso que la búsqueda no arroje resultados; muestra un mensaje informando de ello al usuario
+1. Añade un botón para limpiar todos los filtros
 
-2. Haz que la búsqueda se realice teniendo en cuenta **todos** los criterios de búsqueda informados. Así, una persona podría buscar los "resutarantes que estan en Queens y además sirven comida del tipo italiana".
+2. En el caso que la búsqueda no arroje resultados; muestra un mensaje informando de ello al usuario
+
+3. Haz que la búsqueda se realice teniendo en cuenta **todos** los criterios de búsqueda informados. Así, una persona podría buscar los "restaurantes que están en Queens y además sirven comida del tipo italiana".
+
+4. Añade paginación a la lista resultados. Es decir, poder ir buscando de 20 en 20 resultados; usando los métodos __limit__ y __skip__
+
+5. Modifica el diseño usando clases de W3CSS para que los resultados aparezcan en dos columnas

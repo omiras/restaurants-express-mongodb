@@ -22,12 +22,25 @@ app.get('/', async (req, res) => {
     const db = client.db('sample_restaurants');
     const restaurants = db.collection('restaurants');
 
-    if (!req.query) {
-        res.render('index.ejs', {
-            restaurants: []
-        })
+ 
+    
+    let query;
+
+    if (req.query.restaurant_id) {
+        query = {restaurant_id: req.query.restaurant_id}
     }
-    const results = await restaurants.find({restaurant_id: req.query.restaurant_id}).toArray();
+
+    else if (req.query.borough) {
+        console.log("Borough")
+        query = {borough: req.query.borough}
+    }
+
+    else {
+        return res.render('index.ejs', {
+            restaurants: []
+        })    }
+    
+    const results = await restaurants.find(query).limit(10).toArray();
     
     res.render('index.ejs', {
         restaurants: results

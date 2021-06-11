@@ -5,14 +5,16 @@ let _db;
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.render('index.ejs')
-})
-var MongoClient = require('mongodb').MongoClient;
-var uri = "mongodb+srv://root:root@cluster0.lo8dg.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://root:root@cluster0.lo8dg.mongodb.net/?retryWrites=true&w=majority";
+const MongoClient = require('mongodb').MongoClient;
+const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
-// Otra forma de usar el método connect. Nos conectamos usando la "connection string"; que pasamos como primer parámetro del método. El segundo parámetro es una función de callback que se ejecuta cuando la conexión a la base de datos se ha efectuado (y es el punto seguro donde podemos empezar a hacer cosas, como por ejemlo, levantar el servior Express en el puerto 3000)
-MongoClient.connect(uri, function(err, db) {
+
+// Usamos una función de callback que se ejecuta cuando la conexión a la base de datos se ha efectuado (y es el punto seguro donde podemos empezar a hacer cosas, como por ejemlo, levantar el servior Express en el puerto 3000)
+client.connect(function(err, db) {
     if (err) throw err;
     console.log('Conectado a la base de datos correctamente.')
     
@@ -20,3 +22,7 @@ MongoClient.connect(uri, function(err, db) {
     _db = db;
     app.listen(3000)
   });
+
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+})

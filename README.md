@@ -15,7 +15,7 @@ Importante: Para simplificar, vamos a hacer la búsqueda solamente por UN CAMPO 
 
 * Queremos poder buscar por nombre. Es decir, si buscamos por "Cafe" ; deberíamos obtener todos los restaurantes que tienen en su "name" la palabra "Cafe"; como el resutarante_id = 40364681
 
-* Queremos poder buscar por código postal (campo address.zipcode")
+* Queremos poder buscar por código postal (campo "address.zipcode")
 
 * Queremos poder buscar por tipo de cocina. Echa un vistazo a de la manera que está guardada la cocina en los diferentes documentos de la colección.
 
@@ -26,7 +26,7 @@ Importante: Para simplificar, vamos a hacer la búsqueda solamente por UN CAMPO 
 
 **DIFICIL**
 
-* Queremos poder buscar todos aquellos restaurantes que tienen una nota media superior a cierto número. Por ejemplo, Si buscaremos todos los restaurantes que tiene una nota mínima de **10 puntos**; el restaurante con identificador 40356151 cumpliría este criterio.
+* Queremos poder buscar todos aquellos restaurantes que tienen una nota media superior a cierto número. Por ejemplo, Si buscaremos todos los restaurantes que tiene una nota mínima de **10 puntos**; el restaurante con identificador restaurant_id=40356151 cumpliría este criterio.
 
 [Funciones de agragación](https://docs.mongodb.com/manual/reference/operator/aggregation/avg/)
 

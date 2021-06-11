@@ -1,7 +1,7 @@
 const express = require('express');
 
 // Usaremos esta variable global para poder acceder a la base de datos desde cualquier parte de la aplicación
-const _db;
+let _db;
 
 const app = express();
 

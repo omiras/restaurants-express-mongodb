@@ -21,20 +21,22 @@
     </form>
   </div>
 
-  
+  <% restaurants.forEach(function(restaurant) { %> 
+
     <div class="w3-card-4" style="width:50%;">
       <header class="w3-container w3-brown">
-        <h1>Nombre restaurante</h1>
+        <h1><%= restaurant.name %></h1>
       </header>
   
       <div class="w3-container">
-        <p>Poner aqui todos los datos relevantes del restaurantes a medida que se realicen las consultas</p>
+        <p><%= restaurant.cuisine %> </p>
       </div>
-  
       <footer class="w3-container w3-brown">
-        <h5>Indetificador del restaurante: <strong>123456</strong></h5>
+        <h5>Indetificador del restaurante: <strong><%= restaurant.restaurant_id %> </strong></h5>
       </footer>
     </div>
+
+    <% }) %> 
 </div>
 
 </body>

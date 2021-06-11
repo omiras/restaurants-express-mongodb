@@ -13,6 +13,8 @@ Importante: Para simplificar, vamos a hacer la búsqueda solamente por UN CAMPO 
 
 * Queremos poder buscar por el barrio donde se ubican los restaurantes
 
+BONUS: Recupera todos los barrios de la base de datos. Crea tantos elementos "option" como barrios distintos existen en la colección "resutarants"
+
 * Queremos poder buscar por nombre. Es decir, si buscamos por "Cafe" ; deberíamos obtener todos los restaurantes que tienen en su "name" la palabra "Cafe"; como el resutarante_id = 40364681
 
 * Queremos poder buscar por código postal (campo "address.zipcode")

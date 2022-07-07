@@ -17,7 +17,7 @@ Importante: Para simplificar, vamos a hacer la búsqueda solamente por UN CAMPO 
 
 * Queremos poder buscar por código postal (campo "address.zipcode")
 
-* Queremos poder buscar por tipo de cocina. Echa un vistazo a de la manera que está guardada la cocina en los diferentes documentos de la colección.
+* Queremos poder buscar por tipo de cocina. Echa un vistazo a de la manera que está guardada la cocina en los diferentes documentos de la colección. BONUS cocina: el SELECT se genera de forma dinámica en función de todos los posibles tipos de cocina que existen en la colección restaurants.
 
 ### Modificadores de ordenación
 
